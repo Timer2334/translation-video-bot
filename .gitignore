@@ -1,0 +1,20 @@
+# Игнорирование настроек IDE
+.idea/
+# Игнорирование виртуального окружения Python
+../../venv/bin
+.venv/
+venv/
+node_modules/
+# Игнорирование временных файлов и кэша Python
+__pycache__/
+# Игнорирование логов и временных файлов
+bun.lock
+users/*
+logging/*
+data/temp/*
+!data/temp/.TEMP
+7874147018:AAHCxjTsjL7AY8iBNpRcUvlfSUHfmx8Os6c/
+data/permanent/users/7934770455/
+database.db
+tqueue.binlog
+webhooks_db.binlog

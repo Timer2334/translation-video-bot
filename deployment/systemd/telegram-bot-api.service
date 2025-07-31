@@ -1,0 +1,22 @@
+[Unit]
+Description=Telegram Bot API Server
+After=network.target
+Documentation=https://github.com/tdlib/telegram-bot-api
+
+[Service]
+Type=simple
+ProtectSystem=strict
+WorkingDirectory=/root/TranslationVideo
+ExecStart=/root/telegram-bot-api/bin/telegram-bot-api \
+  --local \
+  --api-id=26820756 --api-hash=f25b391820b1a999cb8ad95b2a59740c \
+  -d /root/TranslationVideo \
+  -t /root/telegram-bot-api
+Restart=on-failure
+RestartSec=5s
+LimitNOFILE=65535
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

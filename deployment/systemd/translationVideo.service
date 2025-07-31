@@ -1,0 +1,12 @@
+[Unit]
+Description=TranslationVideo
+After=network.target
+
+[Service]
+WorkingDirectory=/root/TranslationVideo
+ExecStart=/root/TranslationVideo/venv/bin/python3 -m src.telegram_bot.main
+Restart=always
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
