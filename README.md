@@ -21,10 +21,10 @@ This Telegram bot is a joint educational project developed by two programmers (5
     <tr>
       <td>
         <!-- Замените пути на реальные пути к вашим скриншотам -->
-        <img src="screenshots/1.jpg" alt="Receiving Translation" width="300"/>
+        <img src="assets\screenshots\1.jpg" alt="Receiving Translation" width="300"/>
       </td>
       <td>
-        <img src="screenshots/2.jpg" alt="Final Result" width="300"/>
+        <img src="assets\screenshots\2.jpg" alt="Final Result" width="300"/>
       </td>
     </tr>
   </table>
