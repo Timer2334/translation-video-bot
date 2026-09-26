@@ -1,71 +1,77 @@
-# 🎬 Telegram Video Translator Bot
+<div align="center">
+  <!-- Замените "logo.png" на реальный путь к вашему файлу логотипа -->
+  <img src="logo.png" alt="Bot Logo" width="200"/>
+  
+  # 🎬 Telegram Video Translator Bot
+</div>
 
-> **⚠ Disclaimer:** This project was developed strictly for educational purposes. It uses Yandex Translate in a way that may violate its Terms of Use. We **do not recommend** using this project in production or public deployments.
+> **⚠ Disclaimer:** This project was developed strictly for educational purposes. It utilizes Yandex Translate in a manner that may violate its Terms of Use. We **strongly advise against** using this project in production or public deployments.
 
-## 📌 Описание
+## 📌 Description
 
-Это телеграм-бот, реализованный в рамках учебного проекта двумя разработчиками (вклад: 50/50). Основная задача бота — **переводить речь в видео на другой язык** с использованием Яндекс Переводчика. Итоговое видео собирается с новым аудиотреком поверх оригинального, с сохранением видеоизображения.
+This Telegram bot is a joint educational project developed by two programmers (50/50 contribution). Its primary function is to **translate speech in videos into another language** using the Yandex Translator. The final video is compiled with a new audio track overlaying the original video, preserving the visual sequence perfectly.
 
-## 🖥️ Скриншоты и демонстрации
+## 🖼️ Demonstration
 
-## 🖼️ Демонстрация работы
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>Receiving Translation</b></td>
+      <td align="center"><b>Final Result</b></td>
+    </tr>
+    <tr>
+      <td>
+        <!-- Замените пути на реальные пути к вашим скриншотам -->
+        <img src="screenshots/1.jpg" alt="Receiving Translation" width="300"/>
+      </td>
+      <td>
+        <img src="screenshots/2.jpg" alt="Final Result" width="300"/>
+      </td>
+    </tr>
+  </table>
+</div>
 
-<table>
-  <tr>
-    <td>
-      <img src="screenshots/1.jpg" alt="Получение перевода" width="400"/>
-    </td>
-    <td>
-      <img src="screenshots/2.jpg" alt="Финальный результат" width="400"/>
-    </td>
-  </tr>
-</table>
+The bot operates entirely autonomously and performs the following steps:
+* Receives a video file from the user.
+* Extracts the audio track from the media file.
+* Transcribes the speech to text.
+* Translates the text into the selected language.
+* Synthesizes the translated text back into audio (Voiceover).
+* Merges the newly generated audio with the original video.
+* Sends the final processed video back to the user.
 
+## 🧰 Technologies Used
 
-Бот работает полностью в автономном режиме и позволяет:
+* **Language:** Python
+* **FFmpeg:** For media file processing (extracting audio, merging audio/video, etc.)
+* **Yandex Translate API:** For text translation
+* **Telegram Bot API:** For user interaction
+* **Systemd:** For running the bot as a background system service
+* **Docker:** Partial image configuration (work in progress)
+* **Local Telegram Bot Server:** Used during the testing phase
 
-* принять видеофайл от пользователя;
-* извлечь из него аудиодорожку;
-* транскрибировать речь;
-* перевести её на выбранный язык;
-* озвучить переведённый текст;
-* объединить полученное аудио с оригинальным видео;
-* отправить результат пользователю.
+## ✅ Testing
 
-## 🧰 Технологии
+The core functionality is covered by **unit tests** to ensure stability:
+* Media file processing
+* Translation accuracy
+* Audio generation
+* Final video compilation
 
-* **Язык:** Python
-* **FFmpeg:** для обработки медиафайлов (извлечение аудио, объединение с видео и т.д.)
-* **Yandex Translate API:** для перевода текста
-* **Telegram Bot API:** для взаимодействия с пользователями
-* **Systemd:** для запуска бота как системной службы
-* **Docker:** частичная настройка образа (в процессе)
-* **Локальный Telegram Bot Server:** использовался для тестирования
+## ⚙ Automation & Deployment
 
-## ✅ Тестирование
+* The repository includes a **systemd unit file** for launching and managing the bot as a system service on Linux.
+* A **Dockerfile** is partially configured. We plan to transition the project to a fully functional Docker image in the future.
 
-Базовый функционал покрыт **юнит-тестами**, чтобы обеспечить стабильную работу:
+## 🚫 Legal Disclaimer
 
-* обработка медиафайлов
-* корректность перевода
-* генерация аудио
-* формирование финального видео
+Using Yandex Translator in this manner may violate its End User License Agreement (EULA) because:
+* It is not intended for automated mass video processing.
+* Commercial or large-scale use requires a separate, specific agreement.
 
-## ⚙ Автоматизация
+**The authors bear no responsibility** for any consequences arising from the misuse or unlawful deployment of this project.
 
-* В репозитории присутствует **systemd unit-файл** для запуска и управления ботом как системной службой на Linux.
-* Частично настроен **Dockerfile**, в будущем проект планируется перевести на полноценный Docker-образ.
+## 👥 Authors
 
-## 🚫 Юридическая оговорка
-
-Использование Яндекс Переводчика может нарушать условия его лицензионного соглашения, так как:
-
-* он не предназначен для автоматической массовой обработки видео,
-* а также требует отдельного соглашения для коммерческого/массового использования.
-
-**Авторы не несут ответственности** за любые последствия неправомерного использования проекта.
-
-## 👥 Авторы
-
-* Timer2334
-* AMG
+* **Timer2334**
+* **AMG**
