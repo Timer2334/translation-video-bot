@@ -1,4 +1,4 @@
-aiocryptopay==0.4.7
-aiogram==3.18.0
-aiohttp==3.10.8
+aiocryptopay==0.4.8
+aiogram==3.31.0
+aiohttp==3.14.3
 Pyrogram==2.0.106
