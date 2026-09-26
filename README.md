@@ -1,6 +1,5 @@
 <div align="center">
-  <!-- Замените "logo.png" на реальный путь к вашему файлу логотипа -->
-  <img src="logo.png" alt="Bot Logo" width="200"/>
+  <img src="assets\logo.png" alt="Bot Logo" width="200"/>
   
   # 🎬 Telegram Video Translator Bot
 </div>
